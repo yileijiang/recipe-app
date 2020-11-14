@@ -6,11 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Recipe.destroy_all
+
 Tag.destroy_all
 
-Recipe.create(name: "chocolate cake", description: "lorem ipsum")
-Recipe.create(name: "birthday cake", description: "lorem ipsum lorem lorem")
+
 
 Tag.create(name: "desert")
 Tag.create(name: "entree")

@@ -1,2 +1,8 @@
 <h1><%= @recipe.name %></h1>
 <p><%= @recipe.description %></p>
+
+<% @recipe.tags.each do |tag| %>
+  <li><%= tag.name %></li>
+<% end %>
+
+<%= link_to "Back to All Recipes", recipes_path %>

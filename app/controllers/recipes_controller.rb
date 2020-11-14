@@ -16,13 +16,13 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.save
 
-    redirect_to restaurant recipe_path(@recipe)
+    redirect_to recipe_path(@recipe)
   end
   
   private
 
   def recipe_params
-    params.require(:recipes).permit(:name, :description)
+    params.require(:recipe).permit(:name, :description, tag_ids: [])
   end
 
 end
