@@ -5,4 +5,7 @@
   <li><%= tag.name %></li>
 <% end %>
 
+<p><%= link_to "Delete", recipe_path(@recipe), method: :delete %></p>
+<p><%= link_to "Edit", edit_recipe_path(@recipe) %></p>
+
 <%= link_to "Back to All Recipes", recipes_path %>

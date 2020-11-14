@@ -5,6 +5,7 @@
     <% recipe.tags.each do |tag| %>
       <li><%= tag.name %></li>
     <% end %>
+    <p><%= link_to "Delete", recipe_path(recipe), method: :delete %></p>
 <% end %>  
 
 <%= link_to "Add Recipe", new_recipe_path %>
