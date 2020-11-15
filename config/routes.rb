@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "recipes#index"
   resources :recipes
   resources :tags, only: [:new, :create, :destroy]
+  resources :ingredients, only: [:new, :create]
 end

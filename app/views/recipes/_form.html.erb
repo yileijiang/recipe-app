@@ -2,5 +2,14 @@
 <%= f.input :name %>
 <%= f.input :description %>
 <%= f.association :tags, as: :check_boxes %>
+
+<%= f.simple_fields_for :ingredients do |i| %>
+    <div id="fieldsetContainer">
+        <fieldset id="0">
+            <%= i.input :name %>
+            <%= i.input :quantity %>
+       <% end%>
+       </fieldset>
+    </div>
 <%= f.submit %>
 <% end %>
