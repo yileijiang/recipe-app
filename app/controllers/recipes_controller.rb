@@ -35,6 +35,10 @@ class RecipesController < ApplicationController
 
     redirect_to recipes_path
   end
+
+  def filter
+    @recipes = Recipe.joins(:categorizations).joins(:tags).where(tags: { name: "desert" })
+  end
   
   private
 
